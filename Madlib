@@ -1,0 +1,25 @@
+def mad_lib():
+    # Prompt the user for different types of words
+    plural_noun = input("Give me a plural noun: ")
+    adjective1 = input("How about an adjective: ")
+    animal = input("Now, a type of animal: ")
+    verb_past_tense = input("Let's have a verb (past tense): ")
+    adjective2 = input("Another adjective: ")
+    number = input("A number: ")
+    color = input("A color: ")
+    emotion = input("An emotion: ")
+    verb = input("And finally, a verb: ")
+
+    # Fill in the story template with the user's input
+    story = f"""
+    Once upon a time, in a land filled with {plural_noun}, there was a(n) {adjective1} {animal} who {verb_past_tense} through the forest.
+    The {adjective2} creature stumbled upon {number} sparkling {color} gems hidden beneath a tree. Overwhelmed with {emotion}, 
+    the creature began to {verb} with joy.
+    """
+
+    # Print the story
+    print("\nAnd here's your silly story:\n")
+    print("\033[92m" + story + "\033[0m")  # Adding green color to the story output
+
+# Call the function to play the game
+mad_lib()
