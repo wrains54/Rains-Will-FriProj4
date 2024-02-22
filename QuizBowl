@@ -1,0 +1,35 @@
+import random
+
+# Define a dictionary with basic Python questions and answers
+python_questions_answers = {
+    "What is 1 + 1?": "2",
+    "How do you print 'Hello, World!' in Python?": "print('Hello, World!')",
+    "What symbol is used for comments in Python?": "#",
+    "How do you create a list in Python?": "By using square brackets, for example: my_list = []",
+    "What is the result of 'hello'.upper()?": "HELLO"
+}
+
+# Convert the dictionary keys to a list to enable randomization
+questions = list(python_questions_answers.keys())
+
+# Shuffle the list of questions
+random.shuffle(questions)
+
+# Initialize user score
+user_score = 0
+
+# Iterate through each question
+for question in questions:
+    # Display the question
+    print(question)
+    # Prompt the user for an answer
+    user_answer = input("Your answer: ").strip()
+    # Check if the answer is correct
+    if user_answer.lower() == python_questions_answers[question].lower():
+        print("Correct!")
+        user_score += 1
+    else:
+        print("Incorrect. The correct answer is:", python_questions_answers[question])
+
+# Display final score
+print("Your score:", user_score, "out of", len(questions))
