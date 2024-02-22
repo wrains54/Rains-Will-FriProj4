@@ -1,0 +1,18 @@
+import random
+
+def generate_lottery_numbers():
+    # Generate 5 random numbers between 1 and 69
+    numbers_1_to_69 = random.sample(range(1, 70), 5)
+    
+    # Generate 1 random number between 1 and 29
+    number_1_to_29 = random.randint(1, 29)
+
+    return numbers_1_to_69, number_1_to_29
+
+if __name__ == "__main__":
+    # Call the function to generate lottery numbers
+    lotto_numbers, powerball_number = generate_lottery_numbers()
+
+    # Display the generated numbers
+    print("Lotto Numbers:", lotto_numbers)
+    print("Powerball Number:", powerball_number)
